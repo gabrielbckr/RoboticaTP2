@@ -20,6 +20,14 @@ else:
 
 writingFile = open(FILE_NAME, "a",  )
 
+print('''
+    Usage:  R for Red
+            g for green
+            b for blue
+            y for yellow
+            d for black
+''')
+
 while True:
 
     ser.flush();
