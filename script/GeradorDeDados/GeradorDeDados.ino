@@ -31,6 +31,12 @@ void loop(){
   else if(input == 'b' || input == 'B' ){
     label = "blue";
   }
+  else if(input == 'y' || input == 'Y' ){
+    label = "yellow";
+  }
+  else if(input == 'd' || input == 'D' ){
+    label = "black";
+  }
   else{
     Serial.print(input);
     Serial.println(" Deu ruim");
@@ -38,7 +44,7 @@ void loop(){
   }
 
   /* FAZ LEITURAS */
-  {
+
   digitalWrite(RED_PIN,    LOW);
   digitalWrite(GREEN_PIN,  LOW);
   digitalWrite(BLUE_PIN,   LOW);
@@ -59,7 +65,7 @@ void loop(){
   digitalWrite(BLUE_PIN,   LOW);
   delay(30);
   int greenReflected  = analogRead(LDR_PIN);
-  }
+
 
   
 
