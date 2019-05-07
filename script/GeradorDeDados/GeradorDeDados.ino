@@ -1,9 +1,9 @@
 // Pinos dos LEDs
-#define RED_PIN  23 // Fio vermelho
+#define RED_PIN    23 // Fio vermelho
 #define GREEN_PIN  25 // Fio azul
-#define BLUE_PIN  27 // Fio laranja; Fio marrom é o terra
+#define BLUE_PIN   27 // Fio laranja; Fio marrom é o terra
 
-#define LDR_PIN A8 // VCC=vermelho, GND=marrom, SIG(A0)=amarelo
+#define LDR_PIN    A8 // VCC=vermelho, GND=marrom, SIG(A0)=amarelo
 
 
 char input;
@@ -37,10 +37,31 @@ void loop(){
     return;
   }
 
+  /* FAZ LEITURAS */
+  {
+  digitalWrite(RED_PIN,    LOW);
+  digitalWrite(GREEN_PIN,  LOW);
+  digitalWrite(BLUE_PIN,   LOW);
+  delay(30);
   int environmentBrightness = analogRead(LDR_PIN);
+  digitalWrite(RED_PIN,    HIGH);
+  digitalWrite(GREEN_PIN,  LOW);
+  digitalWrite(BLUE_PIN,   LOW);
+  delay(30);
   int redReflected  = analogRead(LDR_PIN);
+  digitalWrite(RED_PIN,    LOW);
+  digitalWrite(GREEN_PIN,  LOW);
+  digitalWrite(BLUE_PIN,   HIGH);
+  delay(30);
   int blueReflected = analogRead(LDR_PIN);
+  digitalWrite(RED_PIN,    LOW);
+  digitalWrite(GREEN_PIN,  HIGH);
+  digitalWrite(BLUE_PIN,   LOW);
+  delay(30);
   int greenReflected  = analogRead(LDR_PIN);
+  }
+
+  
 
 
   Serial.println(
