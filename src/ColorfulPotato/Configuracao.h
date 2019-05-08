@@ -22,6 +22,11 @@ const int RIGHT_MOTOR_INPUT = 2;
 #define RIGHT_MOTOR_BACKWARD FORWARD
 
 
+#ifdef __PILHA__
+// CONSTANTES DE PILHA
+#else
+// CONSTANTES DE TOMADA
+#endif
 
 
 #endif 

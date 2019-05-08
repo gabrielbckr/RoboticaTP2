@@ -1,3 +1,5 @@
+// #define __PILHA__ // DESCOMENTE PARA USAR NA TOAMDA
+
 #include <LiquidCrystal.h> 
 LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
 #include "Configuracao.h"
