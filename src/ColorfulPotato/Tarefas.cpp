@@ -16,66 +16,76 @@ void TasksSetup() {
 
 void ex1() {
   anda(30);
-  gira1(12);
+  gira_sentido_horario(12);
   anda(30);
-  gira1(12);
+  gira_sentido_horario(12);
   para();
 }
 
 void ex2() {
   anda(30);
-  gira1(6);
+  gira_sentido_horario(6);
   anda(30);
-  gira1(9);
+  gira_sentido_horario(9);
   anda(42);
-  gira1(9);
+  gira_sentido_horario(9);
   para();
 }
 
 void ex3() {
   anda(30);
-  gira1(6);
+  gira_sentido_horario(6);
   anda(30);
-  gira1(6);
+  gira_sentido_horario(6);
   anda(30);
-  gira1(6);
+  gira_sentido_horario(6);
   anda(30);
-  gira1(6);
+  gira_sentido_horario(6);
   para();
 }
 
 void ex4() {
-  gira1(12);
+  gira_sentido_horario(12);
   delay(1000);
-  gira1(6);
+  gira_sentido_horario(6);
 }
 
 void ExploraAmbiente() {
-  // inicia motivmento para algum lugar 
+  // inicia movimento para algum lugar 
+  anda (0);
+  TempoAnterior = millis();
   while(1){
     if (DetectaObjeto()) {
       char color = DetectaCor();
       
-      // ANDA PARA TRAZ UM POUQUINHO
+      anda_re(5);
 
       if (color == yellow) {
         //gire 180 graus e ande para frente;
+        gira_sentido_horario(12);
+        anda (0);
       }
       else if (color == red) {
         //pare e dê um giro de 360 graus (permanecendo parado após o giro).
+        gira_sentido_horario(24);
       }
       else if (color == green) {
         //vire à esquerda 90 graus e ande para frente
+        gira_sentido_antihorario(6);
+        anda (0);
       }
       else if (color == blue) {
         // vire à direita 90 graus e ande para frente
+        gira_sentido_horario(6);
+        anda (0);
       }
       else if (color == black) {
       }
       TempoAnterior = millis();
     }
     TempoAtual = millis();
-    if (TempoAtual - TempoAnterior < 10000){
+    if (TempoAtual - TempoAnterior > 10000){
+      para();
       return;
     }
   }
