@@ -95,7 +95,7 @@ void MostraNoLCDCorDetectada() {
   char color = DetectaObjeto();
   if (color == yellow) {
     lcd2.setCursor(7, 1);
-    lcd2.print ("Amarelo");
+    lcd2.print ("Amarelo ");
   }
   else if (color == red) {
     lcd2.setCursor(7, 1);
@@ -103,14 +103,14 @@ void MostraNoLCDCorDetectada() {
   }
   else if (color == green) {
     lcd2.setCursor(7, 1);
-    lcd2.print ("Verde");
+    lcd2.print ("Verde   ");
   }
   else if (color == blue) {
     lcd2.setCursor(7, 1);
-    lcd2.print ("Azul");
+    lcd2.print ("Azul    ");
   }
   else if (color == black) {
     lcd2.setCursor(7, 1);
-    lcd2.print ("Preto");
+    lcd2.print ("Preto   ");
   }
 }
