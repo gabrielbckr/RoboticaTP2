@@ -65,7 +65,6 @@ void set_speed(){
 }
 
 void set_speed(int left_speed = DEFAULT_LEFT_SPEED, int right_speed = DEFAULT_RIGHT_SPEED ){
-  //Tem alguma coisa errada aki...
   LEFT_MOTOR->setSpeed(DEFAULT_LEFT_SPEED);
-  RIGHT_MOTOR->setSpeed(150);
+  RIGHT_MOTOR->setSpeed(DEFAULT_RIGHT_SPEED);
 }
