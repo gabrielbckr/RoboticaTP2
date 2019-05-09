@@ -23,6 +23,9 @@ void anda(int d){
   para();
   LEFT_MOTOR->run(LEFT_MOTOR_FORWARD );
   RIGHT_MOTOR->run(RIGHT_MOTOR_FORWARD);
+  if (d==0){
+      return;
+  }
   d=d*TEMPO_ANDA;
   delay(d);
   para();
@@ -62,6 +65,7 @@ void set_speed(){
 }
 
 void set_speed(int left_speed = DEFAULT_LEFT_SPEED, int right_speed = DEFAULT_RIGHT_SPEED ){
+  //Tem alguma coisa errada aki...
   LEFT_MOTOR->setSpeed(DEFAULT_LEFT_SPEED);
   RIGHT_MOTOR->setSpeed(150);
 }
