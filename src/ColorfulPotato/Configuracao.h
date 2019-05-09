@@ -44,16 +44,11 @@ const int RIGHT_MOTOR_INPUT = 2;
 #define btnNONE   5
 #define btnDELAY 200
 
+// CONSTANTES DE TOMADA
 
-#ifdef __PILHA__
 // CONSTANTES DE PILHA
 #define TEMPO_ANDA 91
-#define TEMPO_GIRA 181
-#else
-// CONSTANTES DE TOMADA
-#define TEMPO_ANDA 118
-#define TEMPO_GIRA 235
-#endif
+#define TEMPO_GIRA 195
 
 
 #endif 
