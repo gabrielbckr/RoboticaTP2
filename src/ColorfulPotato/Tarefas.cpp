@@ -1,13 +1,11 @@
 #include "Tarefas.h"
 #include "Configuracao.h"
 #include "Movimentacao.h"
-
+#include "SensorDeLuz.h"
 
 void TasksSetup(){
   SETUP_MOVIMENTACAO();
 }
-
-
 
 void ex1(){
   anda(30);

@@ -35,8 +35,12 @@ const int RIGHT_MOTOR_INPUT = 2;
 
 #ifdef __PILHA__
 // CONSTANTES DE PILHA
+#define TEMPO_ANDA 91
+#define TEMPO_GIRA 181
 #else
 // CONSTANTES DE TOMADA
+#define TEMPO_ANDA 118
+#define TEMPO_GIRA 235
 #endif
 
 
