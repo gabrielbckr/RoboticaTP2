@@ -14,5 +14,6 @@ void ex4();
 
 void MostraNoLCDCorDetectada();
 
+void ExploraAmbiente();
 
 #endif
