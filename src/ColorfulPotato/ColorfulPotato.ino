@@ -112,7 +112,7 @@ void Menu(){
         lcd.print("Multi em exec.  ");
         lcd.setCursor(0,1);
         lcd.print("                ");
-        //CHAMAR MULTITAREFA AQUI
+        ExploraAmbiente();
         menu_state = MAIN_3;
         delay(btnDELAY);
       }
@@ -135,7 +135,7 @@ void Menu(){
         lcd.print("Linha em exec.  ");
         lcd.setCursor(0,1);
         lcd.print("                ");
-        //CHAMAR DESENHA LINHA AQUI
+        ex1();
         menu_state = LOC_1;
         delay(btnDELAY);
       }
@@ -162,7 +162,7 @@ void Menu(){
         lcd.print("Triang. em exec.");
         lcd.setCursor(0,1);
         lcd.print("                ");
-        //CHAMAR DESENHA TRIÂNGULO AQUI
+        ex2();
         menu_state = LOC_2;
         delay(btnDELAY);
       }
@@ -185,7 +185,7 @@ void Menu(){
         lcd.print("Quadr. em exec. ");
         lcd.setCursor(0,1);
         lcd.print("                ");
-        //CHAMAR DESENHA QUADRADO AQUI
+        ex3();
         menu_state = LOC_3;
         delay(btnDELAY);
       }
