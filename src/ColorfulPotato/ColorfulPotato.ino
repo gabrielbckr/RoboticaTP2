@@ -21,8 +21,6 @@ bool r,g,b;
 
 void setup() {
   SENSORDELUZ_SETUP();
-  // initialize serial communication with computer:
-  Serial.begin(115200);
   // initialize all the readings to 0:
   for (int thisReading = 0; thisReading < numReadings; thisReading++) {
     readings[thisReading] = 0;

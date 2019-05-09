@@ -9,6 +9,7 @@ Adafruit_DCMotor *RIGHT_MOTOR = AFMS.getMotor(RIGHT_MOTOR_INPUT);
 
 void SETUP_MOVIMENTACAO(){
     AFMS.begin();
+    set_speed();
 }
 
 
@@ -54,4 +55,13 @@ void gira_sentido_antihorario(double t){
   t=t*181;
   delay(t);
   para();
+}
+
+void set_speed(){
+  set_speed(DEFAULT_LEFT_SPEED, DEFAULT_RIGHT_SPEED );
+}
+
+void set_speed(int left_speed = DEFAULT_LEFT_SPEED, int right_speed = DEFAULT_RIGHT_SPEED ){
+  LEFT_MOTOR->setSpeed(DEFAULT_LEFT_SPEED);
+  RIGHT_MOTOR->setSpeed(150);
 }

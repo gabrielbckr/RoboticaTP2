@@ -16,6 +16,8 @@ void anda_re(int d);
 
 void gira_sentido_antihorario(double t);
 
+void set_speed(int left_speed , int right_speed);
 
+void set_speed();
 
 #endif 

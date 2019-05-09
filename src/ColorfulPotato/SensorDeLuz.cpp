@@ -129,4 +129,6 @@ void SENSORDELUZ_SETUP(){
   pinMode(GREEN_PIN, OUTPUT);
   pinMode(BLUE_PIN, OUTPUT);
   pinMode(LDR_PIN, INPUT);
+  // initialize serial communication with computer:
+  Serial.begin(115200);
 }
