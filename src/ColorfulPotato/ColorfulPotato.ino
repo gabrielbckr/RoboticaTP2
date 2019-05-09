@@ -47,6 +47,7 @@ int read_LCD_buttons() {
 void setup() {
   lcd.begin(16, 2);
   SENSORDELUZ_SETUP();
+  SETUP_MOVIMENTACAO();
   // initialize all the readings to 0:
   for (int thisReading = 0; thisReading < numReadings; thisReading++) {
     readings[thisReading] = 0;
