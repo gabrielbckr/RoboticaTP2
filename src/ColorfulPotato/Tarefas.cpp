@@ -51,6 +51,7 @@ void ex4() {
 }
 
 void ExploraAmbiente() {
+  // inicia motivmento para algum lugar 
   while(1){
     if (DetectaObjeto()) {
       char color = DetectaCor();
