@@ -53,9 +53,10 @@ void ex4() {
 void ExploraAmbiente() {
   while(1){
     if (DetectaObjeto()) {
+      char color = DetectaCor();
+      
       // ANDA PARA TRAZ UM POUQUINHO
 
-      char color = DetectaCor();
       if (color == yellow) {
         //gire 180 graus e ande para frente;
       }
