@@ -1,5 +1,5 @@
-#ifndef __COLORFUL_CONFIDURACAO__
-#define __COLORFUL_CONFIDURACAO__
+#ifndef __COLORFUL_CONFIGURACAO__
+#define __COLORFUL_CONFIGURACAO__
 
 
 #include "Arduino.h"
@@ -11,7 +11,7 @@ const int RED_PIN = 23; // Fio vermelho
 const int GREEN_PIN = 25; // Fio azul
 const int BLUE_PIN = 27; // Fio laranja; Fio marrom é o terra
 // Pino do LDR
-const int LDR_PIN = 62; // VCC=vermelho, GND=marrom, SIG(A0)=amarelo
+const int LDR_PIN = A8; // VCC=vermelho, GND=marrom, SIG(A8)=amarelo
 
 /*      CORES        */
 const char yellow = 'C';
@@ -31,6 +31,15 @@ const int RIGHT_MOTOR_INPUT = 2;
 /*       VELOCIDADES     */
 #define DEFAULT_LEFT_SPEED 148
 #define DEFAULT_RIGHT_SPEED 150
+
+/*     BOTOES LCD      */
+#define btnRIGHT  0
+#define btnUP     1
+#define btnDOWN   2
+#define btnLEFT   3
+#define btnSELECT 4
+#define btnNONE   5
+#define btnDELAY 200
 
 
 #ifdef __PILHA__
