@@ -31,7 +31,7 @@ void anda(int d){
 void anda_re(int d){
   para();
   LEFT_MOTOR->run(RIGHT_MOTOR_FORWARD);
-  RIGHT_MOTOR->run(LEFT_MOTOR_FORWARD );
+  RIGHT_MOTOR->run(LEFT_MOTOR_FORWARD);
   d=d*91;
   delay(d);
   para();

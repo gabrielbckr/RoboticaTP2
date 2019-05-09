@@ -20,10 +20,7 @@ char input;
 bool r,g,b;
 
 void setup() {
-  pinMode(RED_PIN, OUTPUT);
-  pinMode(GREEN_PIN, OUTPUT);
-  pinMode(BLUE_PIN, OUTPUT);
-  pinMode(LDR_PIN, INPUT);
+  SENSORDELUZ_SETUP();
   // initialize serial communication with computer:
   Serial.begin(115200);
   // initialize all the readings to 0:

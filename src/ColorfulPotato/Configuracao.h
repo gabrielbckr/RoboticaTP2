@@ -11,7 +11,14 @@ const int RED_PIN = 23; // Fio vermelho
 const int GREEN_PIN = 25; // Fio azul
 const int BLUE_PIN = 27; // Fio laranja; Fio marrom é o terra
 // Pino do LDR
-const int LDR_PIN = A8; // VCC=vermelho, GND=marrom, SIG(A0)=amarelo
+const int LDR_PIN = 62; // VCC=vermelho, GND=marrom, SIG(A0)=amarelo
+
+/*      CORES        */
+const char yellow = 'C';
+const char black = 'D';
+const char blue  = 'B';
+const char red    = 'R';
+const char green = 'G';
 
 /*      MOTORES    */
 const int LEFT_MOTOR_INPUT = 1;
