@@ -76,7 +76,6 @@ bool DetectaObjeto(){
 
 char DetectaCor(){
 
-  
   // Acende os LEDs e mede os valores para cada cor e iluminação ambiente
   digitalWrite(RED_PIN,    LOW);
   digitalWrite(GREEN_PIN,  LOW);
