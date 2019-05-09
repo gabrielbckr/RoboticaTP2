@@ -33,7 +33,7 @@ const int RIGHT_MOTOR_INPUT = 2;
 
 /*       VELOCIDADES     */
 #define DEFAULT_LEFT_SPEED 148
-#define DEFAULT_RIGHT_SPEED 200
+#define DEFAULT_RIGHT_SPEED 150
 
 /*     BOTOES LCD      */
 #define btnRIGHT  0
