@@ -5,6 +5,7 @@ LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
 #include "Configuracao.h"
 #include "Tarefas.h"
 #include "SensorDeLuz.h"
+#include "Movimentacao.h"
 
 // Define the number of samples to keep track of. The higher the number, the
 // more the readings will be smoothed, but the slower the output will respond to
@@ -45,9 +46,9 @@ int read_LCD_buttons() {
 }
 
 void setup() {
-  lcd.begin(16, 2);
   SENSORDELUZ_SETUP();
   SETUP_MOVIMENTACAO();
+  lcd.begin(16, 2);
   // initialize all the readings to 0:
   for (int thisReading = 0; thisReading < numReadings; thisReading++) {
     readings[thisReading] = 0;
@@ -94,7 +95,7 @@ void Menu(){
         lcd.print("Id cor em exec. ");
         lcd.setCursor(0,1);
         lcd.print("                ");
-        //CHAMAR IDENTIFICA CORES AQUI
+        MostraNoLCDCorDetectada();
         menu_state = MAIN_2;
         delay(btnDELAY);
       }

@@ -10,6 +10,7 @@ unsigned long TempoAnterior = 0;
 unsigned long TempoAtual = 0;
 
 void TasksSetup() {
+  SENSORDELUZ_SETUP();
   SETUP_MOVIMENTACAO();
   lcd2.begin(16, 2);
 }

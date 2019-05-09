@@ -2,6 +2,8 @@
 #include "Arduino.h"
 #include "Configuracao.h"
 
+int INTENISADE_LUZ_AMBIENTE = 0;
+
 void DetectaCorEmSerial(){
   String virg = " , ";
   
@@ -71,7 +73,8 @@ void DetectaCorEmSerial(){
 }
 
 bool DetectaObjeto(){
-  return false;
+  int LUZ_ATUAL = analogRead(LDR_PIN);
+  return (LUZ_ATUAL - INTENISADE_LUZ_AMBIENTE > THRESHOLD_OBSTACULO_DE_LUZ);
 }
 
 char DetectaCor(){
@@ -128,6 +131,7 @@ void SENSORDELUZ_SETUP(){
   pinMode(GREEN_PIN, OUTPUT);
   pinMode(BLUE_PIN, OUTPUT);
   pinMode(LDR_PIN, INPUT);
+  INTENISADE_LUZ_AMBIENTE = analogRead(LDR_PIN);
   // initialize serial communication with computer:
   Serial.begin(115200);
 }
