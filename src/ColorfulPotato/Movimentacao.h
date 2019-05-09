@@ -10,7 +10,7 @@ void para();
 
 void anda(int d);
 
-void gira1(double t);
+void gira_sentido_horario(double t);
 
 void anda_re(int d);
 
