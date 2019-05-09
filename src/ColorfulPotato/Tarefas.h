@@ -12,5 +12,7 @@ void ex3();
 
 void ex4();
 
+void MostraNoLCDCorDetectada();
+
 
 #endif
