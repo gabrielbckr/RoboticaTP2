@@ -31,8 +31,8 @@ void anda(int d){
 
 void anda_re(int d){
   para();
-  LEFT_MOTOR->run(RIGHT_MOTOR_FORWARD);
-  RIGHT_MOTOR->run(LEFT_MOTOR_FORWARD);
+  LEFT_MOTOR->run(LEFT_MOTOR_BACKWARD);
+  RIGHT_MOTOR->run(RIGHT_MOTOR_BACKWARD);
   d=d*TEMPO_ANDA;
   delay(d);
   para();
@@ -50,7 +50,7 @@ void gira_sentido_horario(double t){
 
 void gira_sentido_antihorario(double t){
   para();
-  LEFT_MOTOR->run(RIGHT_MOTOR_BACKWARD);
+  LEFT_MOTOR->run(LEFT_MOTOR_BACKWARD);
   RIGHT_MOTOR->run(RIGHT_MOTOR_FORWARD);
   t=t*TEMPO_GIRA;
   delay(t);
