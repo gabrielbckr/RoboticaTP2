@@ -7,14 +7,14 @@
 
 /*      LED E LDR    */
 // Pinos dos LEDs
-const int RED_PIN = 23; // Fio vermelho
+const int RED_PIN   = 23; // Fio vermelho
 const int GREEN_PIN = 25; // Fio azul
-const int BLUE_PIN = 27; // Fio laranja; Fio marrom é o terra
+const int BLUE_PIN  = 27; // Fio laranja; Fio marrom é o terra
 // Pino do LDR
 const int LDR_PIN = A8; // VCC=vermelho, GND=marrom, SIG(A8)=amarelo
 		
 /*      LUZ E LUMINOSA   */		
-const int THRESHOLD_OBSTACULO_DE_LUZ = 300;
+const int THRESHOLD_OBSTACULO_DE_LUZ = 150;
 
 /*      CORES        */
 const char yellow = 'C';
@@ -33,7 +33,7 @@ const int RIGHT_MOTOR_INPUT = 2;
 
 /*       VELOCIDADES     */
 #define DEFAULT_LEFT_SPEED 148
-#define DEFAULT_RIGHT_SPEED 150
+#define DEFAULT_RIGHT_SPEED 200
 
 /*     BOTOES LCD      */
 #define btnRIGHT  0

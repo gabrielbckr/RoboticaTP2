@@ -10,8 +10,8 @@ unsigned long TempoAnterior = 0;
 unsigned long TempoAtual = 0;
 
 void TasksSetup() {
-  SENSORDELUZ_SETUP();
-  SETUP_MOVIMENTACAO();
+  //SENSORDELUZ_SETUP();
+  //SETUP_MOVIMENTACAO();
   lcd2.begin(16, 2);
 }
 
@@ -57,8 +57,10 @@ void ExploraAmbiente() {
   TempoAnterior = millis();
   while(1){
     if (DetectaObjeto()) {
+      para();
+      set_speed();
       char color = DetectaCor();
-      
+      MostraNoLCDCorDetectada(color);
       anda_re(5);
 
       if (color == yellow) {
@@ -84,6 +86,7 @@ void ExploraAmbiente() {
       }
       TempoAnterior = millis();
     }
+    set_speed(74,75);
     TempoAtual = millis();
     if (TempoAtual - TempoAnterior > 10000){
       para();
@@ -93,25 +96,67 @@ void ExploraAmbiente() {
 }
 
 void MostraNoLCDCorDetectada() {
-  char color = DetectaObjeto();
+  char color = DetectaCor();
   if (color == yellow) {
-    lcd2.setCursor(7, 1);
+    lcd2.setCursor(0,1);
+    lcd2.print("                ");
+    lcd2.setCursor(0,1);
     lcd2.print ("Amarelo ");
   }
   else if (color == red) {
-    lcd2.setCursor(7, 1);
+    lcd2.setCursor(0,1);
+    lcd2.print("                ");
+    lcd2.setCursor(0,1);
     lcd2.print ("Vermelho");
   }
   else if (color == green) {
-    lcd2.setCursor(7, 1);
+    lcd2.setCursor(0,1);
+    lcd2.print("                ");
+    lcd2.setCursor(0,1);
     lcd2.print ("Verde   ");
   }
   else if (color == blue) {
-    lcd2.setCursor(7, 1);
+    lcd2.setCursor(0,1);
+    lcd2.print("                ");
+    lcd2.setCursor(0,1);
     lcd2.print ("Azul    ");
   }
   else if (color == black) {
-    lcd2.setCursor(7, 1);
+    lcd2.setCursor(0,1);
+    lcd2.print("                ");
+    lcd2.setCursor(0,1);
+    lcd2.print ("Preto   ");
+  }
+}
+
+void MostraNoLCDCorDetectada(char color) {
+  if (color == yellow) {
+    lcd2.setCursor(0,1);
+    lcd2.print("                ");
+    lcd2.setCursor(0,1);
+    lcd2.print ("Amarelo ");
+  }
+  else if (color == red) {
+    lcd2.setCursor(0,1);
+    lcd2.print("                ");
+    lcd2.setCursor(0,1);
+    lcd2.print ("Vermelho");
+  }
+  else if (color == green) {
+    lcd2.setCursor(0,1);
+    lcd2.print("                ");
+    lcd2.print ("Verde   ");
+  }
+  else if (color == blue) {
+    lcd2.setCursor(0,1);
+    lcd2.print("                ");
+    lcd2.setCursor(0,1);
+    lcd2.print ("Azul    ");
+  }
+  else if (color == black) {
+    lcd2.setCursor(0,1);
+    lcd2.print("                ");
+    lcd2.setCursor(0,1);
     lcd2.print ("Preto   ");
   }
 }

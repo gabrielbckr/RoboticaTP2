@@ -96,6 +96,7 @@ void Menu(){
         lcd.setCursor(0,1);
         lcd.print("                ");
         MostraNoLCDCorDetectada();
+        delay(1000);
         menu_state = MAIN_2;
         delay(btnDELAY);
       }

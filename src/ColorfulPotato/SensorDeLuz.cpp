@@ -74,7 +74,8 @@ void DetectaCorEmSerial(){
 
 bool DetectaObjeto(){
   int LUZ_ATUAL = analogRead(LDR_PIN);
-  return (LUZ_ATUAL - INTENISADE_LUZ_AMBIENTE > THRESHOLD_OBSTACULO_DE_LUZ);
+  //return (LUZ_ATUAL - INTENISADE_LUZ_AMBIENTE < THRESHOLD_OBSTACULO_DE_LUZ);
+  return (LUZ_ATUAL < THRESHOLD_OBSTACULO_DE_LUZ);
 }
 
 char DetectaCor(){
@@ -103,7 +104,7 @@ char DetectaCor(){
   digitalWrite(RED_PIN,    LOW);
   digitalWrite(GREEN_PIN,  LOW);
   digitalWrite(BLUE_PIN,   LOW);
-  //delay(1000);
+  //delay(100);
  
   // Subtrai a iluminação ambiente dos valores das cores
   int redOutput = redReflected - environmentBrightness;

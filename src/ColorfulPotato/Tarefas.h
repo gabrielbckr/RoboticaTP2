@@ -14,6 +14,8 @@ void ex4();
 
 void MostraNoLCDCorDetectada();
 
+void MostraNoLCDCorDetectada(char color);
+
 void ExploraAmbiente();
 
 #endif
